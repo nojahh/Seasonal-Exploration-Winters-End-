@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnjhj72rnscm7"
-path="res://.godot/imported/Jump__002.png-03543791057f87c6b3c307b3c53e6d6b.ctex"
+uid="uid://cn1s2uxus5ndf"
+path="res://.godot/imported/seasons.png-10a8850e44fca2b0a29c847ac4b1d466.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TempleRun (1)/Jump__002.png"
-dest_files=["res://.godot/imported/Jump__002.png-03543791057f87c6b3c307b3c53e6d6b.ctex"]
+source_file="res://Seasonal Tilesets/seasons.png"
+dest_files=["res://.godot/imported/seasons.png-10a8850e44fca2b0a29c847ac4b1d466.ctex"]
 
 [params]
 

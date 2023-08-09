@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbogtm3owdcal"]
+
+[ext_resource type="Texture2D" uid="uid://dmmxg1rdf6yyl" path="res://Sprites/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="1_pf1tj"]
+
+[node name="Controls Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 0.372549, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.532
+anchor_right = 0.5
+anchor_bottom = 0.532
+offset_left = -397.0
+offset_top = -542.84
+offset_right = 420.0
+offset_bottom = 300.16
+texture = ExtResource("1_pf1tj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.473
+anchor_right = 0.5
+anchor_bottom = 0.473
+offset_left = -99.0
+offset_top = -47.26
+offset_right = 116.0
+offset_bottom = 211.74
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "LEFT ARROW = move left
+RIGHT ARROW = move right
+SPACEBAR = jump
+LEFT CLICK(LMB) = attack"
+fit_content = true
