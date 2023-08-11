@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqgacq1e2mcnj"]
+
+[ext_resource type="Shader" path="res://Scene/pause_menu.gdshader" id="1_ffnh8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_idn8d"]
+shader = ExtResource("1_ffnh8")
+
+[node name="pause menu" type="ColorRect"]
+material = SubResource("ShaderMaterial_idn8d")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(512, 256)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 4.0
+
+[node name="Resume" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 47.0
+offset_right = 478.0
+offset_bottom = 108.0
+text = "Resume adventure"
+
+[node name="Leave" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 179.0
+offset_right = 431.0
+offset_bottom = 225.0
+text = "Leave "
+
+[node name="Controls" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 114.0
+offset_right = 463.0
+offset_bottom = 171.0
+text = "Controls"
