@@ -4,6 +4,7 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -190.0
 var direction = 0
+@onready var starting_position = global_position
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -60,3 +61,6 @@ func _on_door_2_body_entered(body):
 func _on_door_3_body_entered(body):
 	if body == self:
 		get_tree().change_scene_to_file("res://levels/level_4.tscn")
+
+func respawn():
+	global_position = starting_position

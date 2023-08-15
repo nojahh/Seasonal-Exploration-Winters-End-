@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhpihc2yu0grm"]
+[gd_scene load_steps=13 format=3 uid="uid://bhpihc2yu0grm"]
 
 [ext_resource type="Texture2D" uid="uid://c2dbkx8xpishe" path="res://Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="1_wwjsc"]
 [ext_resource type="Texture2D" uid="uid://dtui66gslbvgm" path="res://Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="2_f0tl3"]
 [ext_resource type="Texture2D" uid="uid://bnpgkofjyscbf" path="res://Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="3_cnwgi"]
 [ext_resource type="PackedScene" uid="uid://cpo7k2p7lpb25" path="res://Scene/player.tscn" id="4_kb6m7"]
 [ext_resource type="Texture2D" uid="uid://dtrl2abvyqpyv" path="res://Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="4_n2nig"]
+[ext_resource type="PackedScene" uid="uid://dnx16bimibowk" path="res://Scene/fall_limit.tscn" id="6_emepu"]
+[ext_resource type="PackedScene" uid="uid://hxpt8eepdbop" path="res://Scene/user_interface.tscn" id="7_304g0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qd4e"]
 texture = ExtResource("1_wwjsc")
@@ -1026,3 +1028,8 @@ position = Vector2(24, 161)
 zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
+
+[node name="Fall Limit" parent="." instance=ExtResource("6_emepu")]
+position = Vector2(-34, 189)
+
+[node name="User Interface" parent="." instance=ExtResource("7_304g0")]

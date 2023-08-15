@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnx16bimibowk"]
+
+[ext_resource type="Script" path="res://Fall Limit.gd" id="1_0prkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxrrj"]
+size = Vector2(1269.5, 164)
+
+[node name="Fall Limit" type="Area2D"]
+script = ExtResource("1_0prkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(498.5, 175.5)
+shape = SubResource("RectangleShape2D_qxrrj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

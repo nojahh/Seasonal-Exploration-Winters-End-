@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl15plcjd6yqp"]
+[gd_scene load_steps=16 format=3 uid="uid://bl15plcjd6yqp"]
 
 [ext_resource type="PackedScene" uid="uid://cpo7k2p7lpb25" path="res://Scene/player.tscn" id="1_anxba"]
 [ext_resource type="Texture2D" uid="uid://cqni2botgdr0m" path="res://Seasonal Tilesets/3 - Tropics/Terrain (16 x 16).png" id="1_qaee4"]
 [ext_resource type="Texture2D" uid="uid://cu2vjwpnk5arh" path="res://Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" id="2_2xgp6"]
 [ext_resource type="Texture2D" uid="uid://c432ho18gonoe" path="res://Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="3_yuj4f"]
 [ext_resource type="Texture2D" uid="uid://ditlmmry5om7e" path="res://Seasonal Tilesets/3 - Tropics/Background parts/3 - Floating_clouds.png" id="5_mop7r"]
+[ext_resource type="PackedScene" uid="uid://dnx16bimibowk" path="res://Scene/fall_limit.tscn" id="7_cef6s"]
 [ext_resource type="Texture2D" uid="uid://bl5rkk2xcckol" path="res://Seasonal Tilesets/3 - Tropics/Background parts/_Complete_static_BG_(288 x 208).png" id="8_7rnqv"]
+[ext_resource type="PackedScene" uid="uid://hxpt8eepdbop" path="res://Scene/user_interface.tscn" id="8_dsaxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lssak"]
 texture = ExtResource("8_7rnqv")
@@ -1597,5 +1599,10 @@ limit_top = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
 position = Vector2(872, 217)
 shape = SubResource("RectangleShape2D_euy6u")
+
+[node name="Fall Limit" parent="." instance=ExtResource("7_cef6s")]
+position = Vector2(-48, 289)
+
+[node name="User Interface" parent="." instance=ExtResource("8_dsaxo")]
 
 [connection signal="body_entered" from="Door2" to="Player" method="_on_door_2_body_entered"]

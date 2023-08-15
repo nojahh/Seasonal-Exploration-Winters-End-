@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://chmuo747oguq1"]
+[gd_scene load_steps=36 format=3 uid="uid://chmuo747oguq1"]
 
 [ext_resource type="Texture2D" uid="uid://25pl2wgw183m" path="res://Sprites/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_r3ppb"]
 [ext_resource type="PackedScene" uid="uid://cpo7k2p7lpb25" path="res://Scene/player.tscn" id="2_acao0"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://d2lu20pxf6l4x" path="res://Seasonal Tilesets/5 - Misc. universal tiles/Snack_machine_Bench_Trash_bin (16 x 16).png" id="8_w30uh"]
 [ext_resource type="Texture2D" uid="uid://bcp4mfoq0pivi" path="res://Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="9_8v3rx"]
 [ext_resource type="Texture2D" uid="uid://dj01ote8d7i4d" path="res://Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="10_iaga1"]
+[ext_resource type="PackedScene" uid="uid://hxpt8eepdbop" path="res://Scene/user_interface.tscn" id="16_kjo47"]
+[ext_resource type="PackedScene" uid="uid://dnx16bimibowk" path="res://Scene/fall_limit.tscn" id="17_o4t70"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqy5v"]
 texture = ExtResource("1_r3ppb")
@@ -1843,4 +1845,14 @@ limit_top = 0
 limit_right = 1074
 position_smoothing_enabled = true
 
+[node name="User Interface" parent="." instance=ExtResource("16_kjo47")]
+
+[node name="Fall Limit" parent="." instance=ExtResource("17_o4t70")]
+position = Vector2(-335, 95)
+
+[node name="CollisionShape2D" parent="Fall Limit" index="0"]
+position = Vector2(551, 72)
+
 [connection signal="body_entered" from="Door" to="Player" method="_on_door_body_entered"]
+
+[editable path="Fall Limit"]
