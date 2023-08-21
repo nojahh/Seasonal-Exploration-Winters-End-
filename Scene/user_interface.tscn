@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://hxpt8eepdbop"]
+[gd_scene load_steps=2 format=3 uid="uid://dk3y7nrsmcbkc"]
 
-[ext_resource type="Script" path="res://Panel.gd" id="1_7xgd2"]
+[ext_resource type="Script" path="res://Scene/Panel.gd" id="1_emwys"]
 
 [node name="User Interface" type="CanvasLayer"]
 
@@ -9,7 +9,7 @@ offset_left = 710.0
 offset_top = 1.0
 offset_right = 819.0
 offset_bottom = 34.0
-script = ExtResource("1_7xgd2")
+script = ExtResource("1_emwys")
 
 [node name="minutes" type="Label" parent="Panel"]
 modulate = Color(1, 1, 0, 1)

@@ -4,7 +4,7 @@ extends Panel
 
 
 func _process(delta):
-	GameTracker.time += delta
+	GameTracker.time -= delta
 	GameTracker.msec = fmod(GameTracker.time, 1) * 100
 	GameTracker.seconds = fmod(GameTracker.time, 60)
 	GameTracker.minutes = fmod(GameTracker.time, 3600) / 60

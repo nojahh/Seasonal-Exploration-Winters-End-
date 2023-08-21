@@ -47,7 +47,8 @@ grow_vertical = 2
 [node name="Start" type="Button" parent="VBoxContainer"]
 modulate = Color(0.988235, 0.980392, 0.980392, 1)
 layout_mode = 2
-text = "BEGIN"
+text = "Begin Adventure
+"
 
 [node name="Options" type="Button" parent="VBoxContainer"]
 layout_mode = 2

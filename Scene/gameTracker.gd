@@ -1,6 +1,6 @@
 extends Node
 
-var time: float = 0.0
+var time: float = 180
 var minutes: int = 0
 var seconds: int = 0
 var msec: int = 0
@@ -14,7 +14,10 @@ func reset():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if time <- 0:
+		get_tree().change_scene_to_file("res://Scene/gameover.tscn")
 
 func finish():
 	final_time = "%02d:%02d.%03d" % [minutes, seconds, msec]
+
+

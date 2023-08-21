@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bfjjx4wv7plg2"]
+
+[node name="Restart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 815.0
+offset_bottom = 620.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.509
+anchor_top = 0.5
+anchor_right = 0.509
+anchor_bottom = 0.5
+offset_left = -71.38
+offset_top = 225.0
+offset_right = 70.62
+offset_bottom = 259.0
+
+[node name="Restart Adventure" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Restart Adventure"
+
+[node name="Back" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.0
+offset_top = -94.0
+offset_right = -86.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.88, 2.88)
+
+[node name="Nature Withered Away" type="Label" parent="VBoxContainer2"]
+clip_contents = true
+layout_mode = 2
+text = "Nature Withered Away
+
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.461
+anchor_right = 0.5
+anchor_bottom = 0.461
+offset_left = -389.0
+offset_top = 0.179993
+offset_right = 389.0
+offset_bottom = 86.18
+
+[node name="Explanation" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+text = "You have exceeded the time limit"
+horizontal_alignment = 1

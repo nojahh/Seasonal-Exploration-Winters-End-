@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://twf6yfhdo1pg"]
+
+[ext_resource type="Script" path="res://Scene/spike_trap.gd" id="1_4qc0u"]
+[ext_resource type="Texture2D" uid="uid://bfa137kibbap7" path="res://Sprites/trap_spikes_anim_strip_7.png" id="1_qd7mn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftne"]
+size = Vector2(16, 16)
+
+[sub_resource type="Animation" id="Animation_vbfaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_n2lj5"]
+resource_name = "Spike Trigger"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_urhpv"]
+_data = {
+"RESET": SubResource("Animation_vbfaa"),
+"Spike Trigger": SubResource("Animation_n2lj5")
+}
+
+[node name="SpikeTrap" type="Area2D"]
+script = ExtResource("1_4qc0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mftne")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_qd7mn")
+hframes = 7
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_urhpv")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
