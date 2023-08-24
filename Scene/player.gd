@@ -62,5 +62,10 @@ func _on_door_3_body_entered(body):
 	if body == self:
 		get_tree().change_scene_to_file("res://levels/level_4.tscn")
 
+func _on_door_4_body_entered(body):
+	if body == self:
+		GameTracker.finish()
+		get_tree().change_scene_to_file("res://Scene/winning_screen.tscn")
+
 func respawn():
 	global_position = starting_position

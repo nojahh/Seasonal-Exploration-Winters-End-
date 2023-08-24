@@ -47,7 +47,7 @@ layout_mode = 2
 text = "LEFT ARROW = move left
 RIGHT ARROW = move right
 SPACEBAR = jump
-LEFT CLICK(LMB) = attack"
+"
 fit_content = true
 
 [node name="Back" type="Button" parent="."]
